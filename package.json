@@ -8,7 +8,7 @@
     "build": "flow-remove-types src/ -d lib/",
     "prepublish": "yarn test && yarn run build",
     "typecheck": "yarn run flow",
-    "lint": "eslint src/index.js",
+    "lint": "yarn eslint src/index.js",
     "test": "yarn run typecheck && yarn run lint"
   },
   "repository": {
