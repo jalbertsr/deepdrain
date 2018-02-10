@@ -27,7 +27,7 @@ yarn add deepdrain
 
 ```javascript
 
-const { deep } = require('deepdrain')
+const deep = require('deepdrain')
 
 const myCat = {
   name: 'garfiled',
