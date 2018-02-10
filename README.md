@@ -21,20 +21,20 @@ yarn add deepdrain
 ```javascript
 
 var myCat = {
-  name: 'garfiled'
+  name: 'garfiled',
   description: {
-    city: 'BCN'
+    city: 'BCN',
     hobby: {
-      pasta: 'lasagna'
+      pasta: 'lasagna',
       sleep: true
     }
   }
 }
 
-var myValue = deep(myObject, 'description.food.pasta', 'N/A')
+var myValue = deep(myCat, 'description.food.pasta', 'N/A')
 // lasagna
 
-var myValue = deep(myObject, 'description.age', 5)
+var myValue = deep(myCat, 'description.age', 5)
 // 5
 
 ```
