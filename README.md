@@ -13,7 +13,7 @@ npm install deepdrain
 
 ###### yarn
 ```
-yarn install deepdrain
+yarn add deepdrain
 ```
 
 ## Example 
