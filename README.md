@@ -20,7 +20,9 @@ yarn add deepdrain
 
 ```javascript
 
-var myCat = {
+const { deep } = require('deepdrain')
+
+const myCat = {
   name: 'garfiled',
   description: {
     city: 'BCN',
@@ -31,10 +33,10 @@ var myCat = {
   }
 }
 
-var myValue = deep(myCat, 'description.food.pasta', 'N/A')
+deep(myCat, 'description.hobby.pasta', 'N/A')
 // lasagna
 
-var myValue = deep(myCat, 'description.age', 5)
+deep(myCat, 'description.age', 5)
 // 5
 
 ```
