@@ -1,14 +1,14 @@
 {
   "name": "deep",
   "version": "1.0.0",
-  "description": "",
+  "description": "Library for accessing arbitrarily nested, possibly nullable properties on a JavaScript object.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jalbertsr/deep.git"
+    "url": "https://github.com/jalbertsr/deep.git"
   },
   "author": "@jalbertsr jalbertsr@protonmail.ch",
   "license": "ISC",
@@ -16,7 +16,8 @@
     "url": "https://github.com/jalbertsr/deep/issues"
   },
   "homepage": "https://github.com/jalbertsr/deep#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "eslint": "^4.17.0"
   }
 }
