@@ -1,15 +1,14 @@
 {
   "name": "deepdrain",
   "version": "1.0.0",
-  "description":
-    "Library for accessing arbitrarily nested, possibly nullable properties on a JavaScript object or array.",
+  "description": "Library for accessing arbitrarily nested, possibly nullable properties on a JavaScript object or array.",
   "main": "index.js",
   "scripts": {
     "build": "flow-remove-types src/ -d lib/",
     "prepublish": "yarn test && yarn run build",
     "typecheck": "yarn run flow",
     "lint": "yarn eslint src/index.js",
-    "test": "yarn run typecheck && yarn run lint"
+    "test": "yarn typecheck && yarn lint"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "eslint": "^4.17.0",
     "flow-bin": "^0.65.0",
     "flow-remove-types": "^1.2.3",
     "prettier-eslint": "^8.8.1"
