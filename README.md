@@ -2,7 +2,7 @@
 Library for accessing arbitrarily nested, possibly nullable properties on a JavaScript object or array.
 
 Simple smaller and faster than [lodash/get](https://lodash.com/docs/4.17.5#get) , facebook's [idx](https://github.com/facebookincubator/idx) and rambda methods. 
-Also f*ck [underscore/propertyOf](http://underscorejs.org/#propertyOf)
+Also f*ck [underscore/propertyOf](http://underscorejs.org/#propertyOf).
 
 ## Install
 

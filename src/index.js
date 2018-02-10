@@ -1,11 +1,16 @@
+// @flow
+
 'use strict'
 
-module.exports = function (obj, path, _default) {
+function deep(obj: Object, path: string, _default: any): any {
   return path
     .split(/[. | [\]]/)
     .filter(path => path)
-    .reduce(function (acc, path) {
+    .reduce(function(acc: Object, path: string) {
       if (acc) return acc[path] || _default
       else return acc || _default
     }, obj)
 }
+
+deep.default = deep
+module.exports = deep
