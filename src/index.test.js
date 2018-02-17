@@ -55,27 +55,49 @@ describe('should return the value from the given path', function() {
     var obj = {
       animal: {
         cats: [
-          {
-            name: 'monet',
-            sound: 'meow'
-          },
-          {
-            name: 'Ben',
-            sound: 'miau'
-          },
-          {
-            name: 'Muggy',
-            sound: 'nya-ong'
-          },
-          {
-            name: 'Sasha',
-            sound: 'meu'
-          }
+          ['monet', 'meow'],
+          ['Ben', 'miau'],
+          ['Muggy', 'nya-ong'],
+          ['Sasha', 'meu']
         ],
         dog: 'woof'
       }
     }
-    var result = deep(obj, ['animal', 'cats', '2', 'name'])
-    expect(result).to.equal('Muggy')
+    var result = deep(obj, ['animal', 'cats', '3', '1'])
+    expect(result).to.equal('meu')
+  })
+
+  it('default value in a nonexistent property: "animal.cat.name"', function() {
+    var obj = {
+      animal: {
+        cat: {
+          sound: 'miau'
+        },
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cat', 'name'], 'Ben')
+    expect(result).to.equal('Ben')
+  })
+
+  it('default value in a null object: "animal.cat.name"', function() {
+    var obj = {
+      animal: {
+        cat: null,
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cat', 'name'], 'Ben')
+    expect(result).to.equal('Ben')
+  })
+
+  it('default value in an undefined object: "animal.cat.name"', function() {
+    var obj = {
+      animal: {
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cat', 'name'], 'Ben')
+    expect(result).to.equal('Ben')
   })
 })
