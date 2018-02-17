@@ -1,9 +1,81 @@
 var expect = require('chai').expect
 var deep = require('./index')
 
-describe('deepdrain', function () {
-  it('should return the value from the given object path', 
-    function () {
-      expect(true).to.be.true
-    })
+describe('should return the value from the given path', function() {
+  it('simple object path: "animal.cat"', function() {
+    var obj = {
+      animal: {
+        cat: 'meow',
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'dog'])
+    expect(result).to.equal('woof')
+  })
+  it('simple array path: "animal.cat[2]"', function() {
+    var obj = {
+      animal: {
+        cat: ['meow', 'miau', 'nya-ong', 'meu'],
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cat', '2'])
+    expect(result).to.equal('nya-ong')
+  })
+
+  it('complex path: "animal.cats[2].name"', function() {
+    var obj = {
+      animal: {
+        cats: [
+          {
+            name: 'monet',
+            sound: 'meow'
+          },
+          {
+            name: 'Ben',
+            sound: 'miau'
+          },
+          {
+            name: 'Muggy',
+            sound: 'nya-ong'
+          },
+          {
+            name: 'Sasha',
+            sound: 'meu'
+          }
+        ],
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cats', '2', 'name'])
+    expect(result).to.equal('Muggy')
+  })
+
+  it('matrix path: "animal.cats[2][1]"', function() {
+    var obj = {
+      animal: {
+        cats: [
+          {
+            name: 'monet',
+            sound: 'meow'
+          },
+          {
+            name: 'Ben',
+            sound: 'miau'
+          },
+          {
+            name: 'Muggy',
+            sound: 'nya-ong'
+          },
+          {
+            name: 'Sasha',
+            sound: 'meu'
+          }
+        ],
+        dog: 'woof'
+      }
+    }
+    var result = deep(obj, ['animal', 'cats', '2', 'name'])
+    expect(result).to.equal('Muggy')
+  })
 })
