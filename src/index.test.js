@@ -14,18 +14,13 @@ describe('should return the value from the given path', function () {
     var result = deep(obj, ['animal', 'dog'])
     expect(result).to.equal('woof')
   })
-  it('simple array path: "animal.cat[2]"', function () {
-    var obj = {
-      animal: {
-        cat: ['meow', 'miau', 'nya-ong', 'meu'],
-        dog: 'woof'
-      }
-    }
-    var result = deep(obj, ['animal', 'cat', '2'])
+  it('simple array path: "cats[2]"', function () {
+    var cats = ['meow', 'miau', 'nya-ong', 'meu']
+    var result = deep(cats, ['2'])
     expect(result).to.equal('nya-ong')
   })
 
-  it('complex path: "animal.cats[2].name"', function () {
+  it('complex nested object array path: "animal.cats[2].name"', function () {
     var obj = {
       animal: {
         cats: [
