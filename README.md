@@ -1,4 +1,9 @@
 # deepdrain
+
+[![npm](https://img.shields.io/npm/dt/deepdrain.svg)](https://www.npmjs.com/package/deepdrain)
+[![Travis](https://img.shields.io/travis/jalbertsr/deepdrain.svg)](https://travis-ci.org/jalbertsr/deepdrain)
+[![npm](https://img.shields.io/npm/v/deepdrain.svg)](https://www.npmjs.com/package/deepdrain)
+
 `deep` is a utility function for traversing properties on objects and arrays.
 
 If an intermediate property is either null or undefined, it is instead returned.
