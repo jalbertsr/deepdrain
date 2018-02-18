@@ -1,10 +1,9 @@
 {
   "name": "deepdrain",
-  "version": "0.0.2",
+  "version": "1.1.0",
   "description": "Library for accessing arbitrarily nested, possibly nullable properties on a JavaScript object or array.",
   "main": "src/index.js",
   "scripts": {
-    "lint": "npm run eslint src/index.js",
     "test": "mocha src/index.test.js"
   },
   "repository": {
