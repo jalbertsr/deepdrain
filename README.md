@@ -49,7 +49,7 @@ var obj = {
 deep(obj, ['animal', 'cat', '2'])
 // nya-ong
 
-deep(obj, ['animal.age]', 5)
+deep(obj, ['animal', 'age'], 5)
 // 5
 
 ```
