@@ -3,3 +3,4 @@ lib/
 node_modules/
 packages/*/README.md
 *.log
+coverage
