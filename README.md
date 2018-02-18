@@ -8,7 +8,7 @@ of maybe-typed properties.
 This module exists as a stop-gap solution because JavaScript does not currently
 support [optional chaining](https://github.com/tc39/proposal-optional-chaining).
 
-Simple smaller and faster than [lodash/get](https://lodash.com/docs/4.17.5#get) , facebook's [idx](https://github.com/facebookincubator/idx) and rambda methods. 
+Simpler, smaller and faster than [lodash/get](https://lodash.com/docs/4.17.5#get) , facebook's [idx](https://github.com/facebookincubator/idx) and rambda methods. 
 Also f*ck [underscore/propertyOf](http://underscorejs.org/#propertyOf).
 
 ## Install
@@ -23,27 +23,33 @@ npm install deepdrain
 yarn add deepdrain
 ```
 
+## Description 
+
+```javascript
+deep(obj, path, defaultValue)
+
+obj: Object | Array
+path: Array
+defaultValue: any
+```
+
 ## Example 
 
 ```javascript
 
-const deep = require('deepdrain')
+var deep = require('deepdrain')
 
-const myCat = {
-  name: 'garfiled',
-  description: {
-    city: 'BCN',
-    hobby: {
-      pasta: 'lasagna',
-      sleep: true
-    }
+var obj = {
+  animal: {
+    cat: ['meow', 'miau', 'nya-ong', 'meu'],
+    dog: 'woof'
   }
 }
 
-deep(myCat, 'description.hobby.pasta', 'N/A')
-// lasagna
+deep(obj, ['animal', 'cat', '2'])
+// nya-ong
 
-deep(myCat, 'description.age', 5)
+deep(obj, ['animal.age]', 5)
 // 5
 
 ```
