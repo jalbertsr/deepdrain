@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/dt/deepdrain.svg)](https://www.npmjs.com/package/deepdrain)
 [![Travis](https://img.shields.io/travis/jalbertsr/deepdrain.svg)](https://travis-ci.org/jalbertsr/deepdrain)
 [![npm](https://img.shields.io/npm/v/deepdrain.svg)](https://www.npmjs.com/package/deepdrain)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/jalbertsr/deepdrain/tree/master)
 
 `deep` is a utility function for traversing properties on objects and arrays.
 
